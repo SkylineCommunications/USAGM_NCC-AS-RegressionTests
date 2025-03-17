@@ -59,8 +59,8 @@ using Skyline.DataMiner.Automation;
 /// </summary>
 public class Script
 {
-	private const string TestName = "RT_Customer_MyFirstRegressionTest";
-	private const string TestDescription = "Regression Test to validate something.";
+	private const string TestName = "RT_USAGM-NCC_MyFirstRegressionTest";
+	private const string TestDescription = "Regression Test For Skyline Masking Services Protocol.";
 
 	/// <summary>
 	/// The Script entry point.
@@ -72,8 +72,7 @@ public class Script
 		{
 			Test myTest = new Test(TestName, TestDescription);
 			myTest.AddTestCase(
-				new TestCaseExample("Test 1"),
-				new TestCaseExample("Test 2"));
+				new LoadSchedules("Test 1"));
 
 			myTest.Execute(engine);
 			myTest.PublishResults(engine);
